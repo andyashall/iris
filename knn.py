@@ -12,9 +12,9 @@ print(train.head())
 train['Species'] = train['Species'].map({'Iris-setosa': 0, 'Iris-versicolor': 1, 'Iris-virginica': 2})
 
 # Split the data
-x = train.drop('Species', 1)
+x = train.drop(['Species', 'Id'], 1)
 y = train['Species']
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=.75, random_state=1001)
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=.25, random_state=1001)
 
 # Build and fit model
 model = KNeighborsClassifier()

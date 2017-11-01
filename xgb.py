@@ -9,9 +9,9 @@ train = pd.read_csv('./data/iris.csv')
 print(train.head())
 
 # Split the data
-x = train.drop('Species', 1)
+x = train.drop(['Species', 'Id'], 1)
 y = train['Species']
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=.75, random_state=1001)
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=.25, random_state=1001)
 
 # Prams for classifier
 n_estimators = 90

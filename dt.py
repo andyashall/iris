@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.svm import LinearSVR
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import accuracy_score
 
 # Import the data
@@ -17,7 +17,7 @@ y = train['Species']
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=.25, random_state=1001)
 
 # Build and fit model
-model = LinearSVR()
+model = DecisionTreeRegressor()
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
