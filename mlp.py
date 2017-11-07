@@ -17,7 +17,12 @@ y = train['Species']
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=.25, random_state=1001)
 
 # Build and fit model
-model = MLPClassifier()
+model = MLPClassifier(
+  hidden_layer_sizes = (500, ),
+  activation = 'relu',
+  learning_rate = 'adaptive',
+  random_state = 1001
+)
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)

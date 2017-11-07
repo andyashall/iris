@@ -14,4 +14,4 @@
 | K-Nearest Neighbors    | knn.py  | 0.95  | y          |
 | Random Forest          | rf.py   | 0.97  | n          |
 | Deep Neural Network    | dnn.py  | 1     | y          |
-|                        |         |       |            |
+| Multi-layer Perceptron | mlp.py  | 1     | y          |
